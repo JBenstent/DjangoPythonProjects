@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Counter</title>
+    <meta charset='utf-8'>
+    <link rel="stylesheet" type='text/css' href="{{ url_for('static', filename='styles.css') }}">
+
+  </head>
+  <body>
+    <div id='container'>
+      <h3>Counter</h3>
+
+      {{  session['counter']  }} <p>times.</p>
+
+      <a href="{{ url_for('add2') }}"><button>+2</button></a>
+      <a href="{{ url_for('reset') }}"><button>Reset</button></a>
+    </div>
+
+
+  </body>
+</html>

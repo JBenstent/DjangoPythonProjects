@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Home Page</title>
+  </head>
+  <body>
+
+    <form action="isvalid" method="POST"> 
+      {% csrf_token %}
+    <p>Email Address: </p><input type="text" name="emailaddress">
+    <input type="submit" name="submit">
+    </form>
+{{error}}
+  </body>
+</html>

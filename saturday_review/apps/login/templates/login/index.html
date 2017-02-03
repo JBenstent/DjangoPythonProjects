@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Login and Registration</title>
+    </head>
+    <body>
+        <h1>Register</h1>
+        <form action="{% url 'login:register_subroute'%}" method="POST">
+            {% csrf_token %}
+            <label for="username">Username</label>
+            <input type="text" name="username" value="ryan">
+            <label for="password">Password</label>
+            <input type="password" name="password" value="not_secure_password">
+            <label for="confirm">Confirm Password</label>
+            <input type="password" name="confirm" value="not_secure_confirmation">
+            <input type="submit">
+        </form>
+
+        <h1>Login</h1>
+        <form action="{% url 'login:login_method'%}" method="POST">
+            {% csrf_token %}
+            <label for="username">Username</label>
+            <input type="text" name="username" value="">
+            <label for="password">Password</label>
+            <input type="password" name="password" value="">
+            <input type="submit">
+
+            {% for messages in messages %}
+            {{messages}}
+            {%endfor%}
+        </form>
+    </body>
+</html>

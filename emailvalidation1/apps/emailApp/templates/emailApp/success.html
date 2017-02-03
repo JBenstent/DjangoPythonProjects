@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Success</title>
+  </head>
+  <body>
+
+    <h1>The email address you entered {{request.POST.emailaddress}} is valid!</h1>
+
+<form action="success" method="POST">
+  {% csrf_token %}
+  <ol>
+    {% for e in emails %}
+    <li>{{e.emails}}  {{e.created_at}}</li>
+    {% endfor %}
+  </ol>
+
+</form>
+
+<form action="success" method="POST">
+
+  <a href="success"><button type="button" name="delete">Delete</button></a>
+</form>
+
+  </body>
+</html>

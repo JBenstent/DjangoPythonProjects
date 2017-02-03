@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Great Number Game!</title>
+  </head>
+  <body>
+
+    <h2>Welcome to the Great Number Game!</h2>
+
+    <p>I am thinking of a number between 1 and 3. Take a guess!</p>
+
+    {% if 'inputNum' in session: %}
+      {% if session['inputNum'] > session['hiddenNum'] %}
+      <div>
+        <h3>Too High!</h3>
+      </div>
+      {% elif session['inputNum'] < session['hiddenNum'] %}
+      <div>
+        <h3>Too Low!</h3>
+      </div>
+      {% else %}
+      <div>
+        <h3>You Guessed right!!</h3>
+      </div>
+      {% endif %}
+      <div>
+    {$ if 'button1' in session: %}
+
+
+
+
+
+    {% endif %}
+
+      <form class="input" action="/process" method="post">
+        <input type="hidden" name="action" value="register">
+        <input type="text" name="number" value="">
+        <input type="submit" name="button" value='submit'>
+      </form>
+
+      <form class="" action="reset" method="post">
+        <input type="submit" name="button1" value= 'RESET'>
+
+      </form>
+
+
+
+  </body>
+</html>

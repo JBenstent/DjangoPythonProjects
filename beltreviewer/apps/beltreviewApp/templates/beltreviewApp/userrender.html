@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>User</title>
+  </head>
+  <body>
+
+
+    <p>Name: </p> {{user.first_name}} {{user.last_name}}
+    <p>Email: </p> {{user.email}}
+
+    <p>review count</p>
+    {{user.reviews.count}}
+
+{% for review in user.reviews.all %}
+<br><a href="/books/{{review.book.id}}">{{review.book.book_title}}</a>
+
+{%endfor%}
+
+  </body>
+</html>

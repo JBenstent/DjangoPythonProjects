@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>book information</title>
+  </head>
+  <body>
+
+    <div class="book">
+    {{book.title}}
+    <br>
+    {{book.author}}
+    <br>
+    Reviews:
+    <br>
+    {% for review in book.reviews.all %}
+    <hr>
+    {{review.contents}}
+    <br>
+    {{review.rating}}
+    
+    {% endfor %}
+    </div>
+
+    <form action="/books/{{book.id}}/addreview" method="POST">
+      {% csrf_token %}
+      <h4>Add a Review</h4>
+      <textarea name="review" rows="8" cols="80"></textarea>
+      <select name='rating'>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+      <input type="submit" name="submit">
+    </form>
+
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ninja Turtles</title>
+  </head>
+  <body>
+
+    {% if color == 'orange' %}
+    <img src="https://sites.google.com/a/clipartonline.net/teenage-mutant-ninja-turtles/_/rsrc/1392050726889/michelangelo-ninja-turtle/Michelangelo%20Ninja%20Turtle%204.png?height=400&width=400" alt="Micael">
+    {% endif %}
+
+    {% if color == 'red' %}
+    <img src="https://sites.google.com/a/clipartonline.net/teenage-mutant-ninja-turtles/_/rsrc/1392049222538/raphael-ninja-turtle/raphael-tmnt_3.png?height=400&width=400" alt="Raphael">
+    {% endif %}
+
+    {% if color == 'purple' %}
+    <img src="https://s-media-cache-ak0.pinimg.com/736x/90/e1/4b/90e14b73e89e8abf3021bae08ff3d23a.jpg" alt="Donatello">
+    {%endif%}
+
+    {% if color == 'blue' %}
+    <img src="https://sites.google.com/a/clipartonline.net/teenage-mutant-ninja-turtles/_/rsrc/1334837818351/leonardo-ninja-turtle/Ninja%20Turtle%20Leonardo%206.gif?height=369&width=400" alt="Leondardo">
+    {%endif%}
+
+    {% if color != 'red' %}
+      {% if color != 'blue' %}
+        {% if color != 'purple' %}
+          {% if color != 'orange' %}
+    <img src="http://starschanges.com/wp-content/uploads/2015/11/Megan-Fox_4.jpg" alt="MeganFox"> -->
+          {% endif %}
+        {% endif %}
+      {% endif %}
+    {% endif %}
+
+
+  </body>
+</html>

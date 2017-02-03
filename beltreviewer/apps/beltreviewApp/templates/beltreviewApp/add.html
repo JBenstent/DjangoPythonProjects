@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Add</title>
+  </head>
+  <body>
+<!-- action should be tied to urls.py -->
+    <form action="/books/create" method="POST">
+      {% csrf_token %}
+      <p>Book Title: </p><input type="text" name="book_title">
+      <p>Author: </p>
+      <select name='authors'>
+        <option value="Stephen King">Stephen King</option>
+        <option value="Jonathan Benstent">Jonathan Benstent</option>
+        <option value="John Smith">John Smith</option>
+      </select>
+      <p>Or add an author: </p><input type="text" name="author">
+      <h4>Review</h4>
+      <textarea name="review" rows="8" cols="80"></textarea>
+      <h4>Rating</h4>
+      <select name='rating'>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+      <br>
+      <button type="submit" name="submit">Add Book and Review</button>
+    </form>
+
+  </body>
+</html>
